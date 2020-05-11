@@ -82,8 +82,6 @@ app.post("/repositories/:id/like", (request, response) => {
   repositories[repoIdx].likes = repositories[repoIdx].likes + 1;
 
   response.status(200).json({
-    title: repositories[repoIdx].title,
-    url: repositories[repoIdx].url,
     likes: repositories[repoIdx].likes
   });
 });
